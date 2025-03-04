@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trollsite</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .container {
+      position: relative;
+      height: 100%;
+    }
+    #playButton {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: red;
+      color: #fff;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="playButton" onclick="playSound()">Отправить подарок</button>
+    <audio id="sound" src="sound.mp3"></audio>
+  </div>
+  <script>
+    function playSound() {
+      var audio = document.getElementById('sound');
+      audio.volume = 1.0;
+      audio.play();
+    }
+  </script>
+</body>
+</html>
